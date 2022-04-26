@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.time-selector,
+.player,
+.sound-picker {
+  height: 80%;
+  flex: 1;
+}
+
+.time-selector,
+.player,
+.sound-picker {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.player {
+  position: relative;
+}
+.player svg {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+
+.time-display {
+  position: absolute;
+  bottom: 10%;
+  color: white;
+  font-size: 40px;
+}
+
+.vid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.time-selector button,
+.sound-picker button {
+  color: white;
+  width: 30%;
+  height: 10%;
+  background: none;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.time-selector button:hover {
+  color: black;
+  background-color: blanchedalmond;
+}
+
+.sound-picker button {
+  border: none;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 30px;
+}
+.sound-picker button img {
+  height: 100%;
+}
+.sound-picker button:nth-child(1) {
+  background: #4947a1;
+}
+.sound-picker button:nth-child(2) {
+  background: #be3127;
+}
+
+.play {
+  position: relative;
+  top: 10%;
+  width: 15%;
+  height: 15%;
+}
+.replay {
+  position: relative;
+  bottom: 10%;
+  width: 15%;
+  height: 15%;
+}
+
+@media only screen and (max-width: 900px) {
+  .player {
+    width: 30%;
+    height: 30%;
+  }
+}
